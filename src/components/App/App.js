@@ -1,22 +1,16 @@
 import React from "react";
 import "./App.css";
-<<<<<<< HEAD
-import GoogleMaps from "../Map";
 
-function App() {
-  return (
-    <div className="App">
-      <h2> Food Hackathon (Working Title) </h2>
-      <GoogleMaps />
-    </div>
-=======
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+    import GoogleMaps from "../Map";
 import HomePage from "../Home";
 import StayingIn from "../StayingIn";
 import GoingOut from "../GoingOut";
 
 function App() {
   return (
+
     <Router>
       <div className="App">
         <Link to="/" className="links">
@@ -29,13 +23,14 @@ function App() {
         </Route>
         <Route path="/goingout">
           <GoingOut />
+    <GoogleMaps />
         </Route>
         <Route path="/">
           <HomePage />
         </Route>
       </Switch>
     </Router>
->>>>>>> 9d5de2038e8430566fbb4a21b7709a0f6932f49c
+
   );
 }
 
