@@ -4,17 +4,17 @@ import css from "./map.module.css";
 import { usePosition } from "./usePosition";
 import { MAPAPIKEY } from "../../config";
 
-function GoogleMaps({ google }) {
+function GoogleMaps({ google, keyword }) {
   const { latitude, longitude, error } = usePosition();
   const [restaurants, setRestaurants] = useState([]);
 
-  console.log({ latitude }, { longitude });
+  console.log({ latitude }, { longitude }, keyword);
 
   useEffect(() => {
     async function getRestaurants() {
       try {
         const res = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=1500&type=restaurant&key=AIzaSyDiTFOweoVOB5FRPZ70G5xS8zEL28PoL_Q`
+          `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=restaurant&keyword=${keyword}&key=AIzaSyDiTFOweoVOB5FRPZ70G5xS8zEL28PoL_Q`
           //   {
           //     headers: { "Access-Control-Allow-Origin": "*" },
           //     mode: "cors",
@@ -30,7 +30,7 @@ function GoogleMaps({ google }) {
       }
     }
     getRestaurants();
-  }, [longitude]);
+  }, [keyword]);
 
   return (
     <>
@@ -42,11 +42,12 @@ function GoogleMaps({ google }) {
             lng: longitude,
           }}
           style={{
-            width: "95%",
+            width: "85%",
             maxWidth: "600px",
             maxHeight: "600px",
             height: "300px",
             position: "relative",
+            left: "10px",
           }}
         >
           <Marker position={{ lat: latitude, lng: longitude }} />

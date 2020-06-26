@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./GoingOut.css";
+import GoogleMaps from "../Map";
 
 const initialState = {
   people: null,
@@ -10,6 +11,7 @@ const initialState = {
 function GoingOut() {
   const [bill, setBill] = useState(initialState);
   const [splitTotal, setSplitTotal] = useState(null);
+  const [location, setLocation] = useState("");
 
   function handleChange(e) {
     const newValue = e.target.value;
@@ -28,14 +30,25 @@ function GoingOut() {
     setSplitTotal(payment);
   }
 
+  function handleLocation(e) {
+    setLocation(e.target.value);
+  }
+
   return (
     <>
       <div>
         <h2 id="goingOutTitle">Going Out</h2>
         <div id="whereToGo">
           <h4>Where do you fancy going?</h4>
-          <input placeholder="Where do you want to go?" />
-          <div id="map"> </div>
+          <input
+            placeholder="Where do you want to go?"
+            name="rest"
+            value={location}
+            onChange={handleLocation}
+          />
+          <div id="map">
+            <GoogleMaps keyword={location} />
+          </div>
         </div>
         <div id="billCalculator">
           <h4>Bill Calculator</h4>
