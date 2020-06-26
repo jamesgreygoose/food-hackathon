@@ -30,9 +30,9 @@ function StayingIn() {
         return (
           <div>
             <h2>{item.strMeal}</h2>
-            <div>
+            <div id="ingredients">
               <h3> Ingredients </h3>
-              <ul>
+              <ul style={{ listStyleType: "none" }}>
                 {item.strMeasure1 && (
                   <li>
                     {item.strMeasure1} {item.strIngredient1}
@@ -135,7 +135,9 @@ function StayingIn() {
                 )}
               </ul>
             </div>
-            <p>{item.strInstructions}</p>
+            <div id="instructions">
+              <p>{item.strInstructions}</p>
+            </div>
           </div>
         );
       })}
