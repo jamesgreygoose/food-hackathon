@@ -56,6 +56,7 @@ function GoogleMaps({ google }) {
               <Marker
                 title={`${item.name}`}
                 name={`${item.name}`}
+                label={`${item.name}`}
                 position={{
                   lat: item.geometry.location.lat,
                   lng: item.geometry.location.lng,
