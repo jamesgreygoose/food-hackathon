@@ -1,16 +1,14 @@
 import React from "react";
 import "./App.css";
 
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-    import GoogleMaps from "../Map";
+
 import HomePage from "../Home";
 import StayingIn from "../StayingIn";
 import GoingOut from "../GoingOut";
 
 function App() {
   return (
-
     <Router>
       <div className="App">
         <Link to="/" className="links">
@@ -23,14 +21,12 @@ function App() {
         </Route>
         <Route path="/goingout">
           <GoingOut />
-    <GoogleMaps />
         </Route>
         <Route path="/">
           <HomePage />
         </Route>
       </Switch>
     </Router>
-
   );
 }
 
