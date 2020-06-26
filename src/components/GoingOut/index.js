@@ -15,7 +15,6 @@ function GoingOut() {
     const newValue = e.target.value;
     const newName = e.target.name;
     setBill({ ...bill, [newName]: newValue });
-    console.log(bill);
   }
 
   function calculateBill() {
@@ -23,8 +22,9 @@ function GoingOut() {
     const diners = bill.people;
     const perc = bill.perc;
     const tip = (cost / 100) * perc;
-    const total = tip + cost;
+    const total = Number(cost) + Number(tip);
     const payment = total / diners;
+    // console.log("tip:", tip, "total:", typeof total, "payment:", payment);
     setSplitTotal(payment);
   }
 
@@ -60,8 +60,8 @@ function GoingOut() {
           {bill.people && bill.perc && bill.cost && (
             <button onClick={calculateBill}>Calculate</button>
           )}
-          <h5 id="eachPay">You each pay</h5>
-          <p className="p">{splitTotal}</p>
+          <h4 id="eachPay">You each pay</h4>
+          <p className="p">£{splitTotal}</p>
         </div>
       </div>
     </>

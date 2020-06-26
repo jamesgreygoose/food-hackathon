@@ -29,10 +29,10 @@ function StayingIn() {
       {randomMeal.map((item) => {
         return (
           <div>
-            <h2>{item.strMeal}</h2>
+            <h2 id="mealtitle">{item.strMeal}</h2>
             <div id="ingredients">
               <h3> Ingredients </h3>
-              <ul style={{ listStyleType: "none" }}>
+              <ul className="list">
                 {item.strMeasure1 && (
                   <li>
                     {item.strMeasure1} {item.strIngredient1}
