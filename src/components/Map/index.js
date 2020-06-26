@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Map, Marker, GoogleApiWrapper, InfoWindow } from "google-maps-react";
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 import css from "./map.module.css";
 import { usePosition } from "./usePosition";
 import { MAPAPIKEY } from "../../config";
@@ -14,12 +14,8 @@ function GoogleMaps({ google, keyword }) {
     async function getRestaurants() {
       try {
         const res = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=restaurant&keyword=${keyword}&key=AIzaSyC0ue6GBSdLopelg1kPuN5ygZJvbkoqgGM
+          `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=restaurant&keyword=${keyword}&key=${MAPAPIKEY}
           `
-          //   {
-          //     headers: { "Access-Control-Allow-Origin": "*" },
-          //     mode: "cors",
-          //   }
         );
         const data = await res.json();
         if (data) {
