@@ -1,0 +1,50 @@
+#goingOutTitle {
+  text-align: center;
+  background-color: yellow;
+  width: 75%;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#whereToGo {
+  background-color: lightgrey;
+  margin: 2vh auto;
+  width: 90vw;
+  height: 40vw;
+}
+
+#billCalculator {
+  background-color: lightgrey;
+  margin: 1vh auto;
+  width: 90vw;
+  height: 60vw;
+}
+
+input {
+  width: 90%;
+  height: 15%;
+  display: block;
+  margin: 4% auto;
+}
+
+#eachPay {
+  margin: 10% 0 0 0;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: grey solid 0.1rem;
+  text-align: center;
+}
+
+.p {
+  border: green solid 3px;
+  height: 10%;
+  background-color: lightgreen;
+  margin: none;
+  text-align: center;
+  padding-top: 5%;
+}
+
+h4 {
+  padding: 5% 0 0 2%;
+}
