@@ -14,7 +14,8 @@ function GoogleMaps({ google, keyword }) {
     async function getRestaurants() {
       try {
         const res = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=restaurant&keyword=${keyword}&key=AIzaSyDiTFOweoVOB5FRPZ70G5xS8zEL28PoL_Q`
+          `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=3000&type=restaurant&keyword=${keyword}&key=AIzaSyC0ue6GBSdLopelg1kPuN5ygZJvbkoqgGM
+          `
           //   {
           //     headers: { "Access-Control-Allow-Origin": "*" },
           //     mode: "cors",

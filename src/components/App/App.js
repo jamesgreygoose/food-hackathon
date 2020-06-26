@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import GoogleMaps from "../Map";
+
 import HomePage from "../Home";
 import StayingIn from "../StayingIn";
 import GoingOut from "../GoingOut";
