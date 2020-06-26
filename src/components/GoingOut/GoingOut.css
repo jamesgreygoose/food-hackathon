@@ -1,0 +1,49 @@
+body {
+  background-image: url("https://cdn2.vectorstock.com/i/1000x1000/49/06/cute-food-background-kawaii-cartoons-vector-20294906.jpg");
+}
+
+#goingOutTitle {
+  display: block;
+  border: yellow solid 0.5rem;
+  background-color: white;
+  width: 90vw;
+  text-align: center;
+  padding-top: 5%;
+  height: 8vh;
+  margin: 0 auto;
+}
+
+#whereToGo {
+  background-color: lightgrey;
+  margin: 2vh auto;
+  width: 90vw;
+  height: 40vw;
+}
+
+#billCalculator {
+  background-color: lightgrey;
+  margin: 2vh auto;
+  width: 90vw;
+  height: 60vw;
+}
+
+input {
+  width: 90%;
+  height: 15%;
+  display: block;
+  margin: 4% auto;
+}
+
+#eachPay {
+  margin-top: 20%;
+}
+
+.p {
+  border: green solid 3px;
+  height: 20%;
+  background-color: lightgreen;
+}
+
+h4 {
+  padding: 2% 0 0 2%;
+}

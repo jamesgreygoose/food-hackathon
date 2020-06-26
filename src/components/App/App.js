@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <Link to="/" className="links">
-          <h2> Food Hackathon (Working Title) </h2>
+          <h2> GIS ME DINNER</h2>
         </Link>
       </div>
       <Switch>
