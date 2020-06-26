@@ -1,0 +1,35 @@
+.homeBox {
+  width: 80%;
+  height: 40vh;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.in {
+  position: relative;
+  top: 40%;
+  left: 10%;
+}
+
+.out {
+  position: relative;
+  top: 40%;
+  left: 55%;
+}
+
+.inImg {
+  position: relative;
+  left: 45%;
+  width: 160px;
+}
+.outImg {
+  width: 150px;
+  position: relative;
+  top: -20px;
+  left: 5%;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+}
