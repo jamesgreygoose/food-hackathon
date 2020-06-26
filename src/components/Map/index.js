@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import { Map, Marker, GoogleApiWrapper, InfoWindow } from "google-maps-react";
 import css from "./map.module.css";
 import { usePosition } from "./usePosition";
 import { MAPAPIKEY } from "../../config";
